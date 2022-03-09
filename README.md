@@ -11,7 +11,8 @@ Any contributions are welcome !
 # Prerequesites
 
 You have to get access to the "Alertes trafic du réseau des Transports en Commun Lyonnais - v2" on the Lyon's data website: https://data.grandlyon.com/jeux-de-donnees/alertes-trafic-reseau-transports-commun-lyonnais-v2/info<br />
-Please note that the account you will have to register on the website will be use as the API credentials, so don't put anything too personnal in them.
+Please note that the account you will have to register on the website will be use as the API credentials, so don't put anything too personnal in them.<br /><br />
+Axios is required for the module to work.
 
 # How to use it
 
@@ -22,6 +23,17 @@ Import the module using require:
 const grandlyon = require(path to tcl-api.js);
 ```
 Use one of the functions described below.
+
+# Data description
+- type: Disruption type
+- cause: Disruption cause
+- début: Disruption begin date
+- fin: Disruption end date
+- mode: Disruption transport mode
+- ligne_com: Commercial line name
+- ligne_cli: Client line name
+- titre: Disruption name
+- message: Disruption details
 
 # Functions
 ## get_disruptions

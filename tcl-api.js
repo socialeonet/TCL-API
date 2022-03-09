@@ -23,9 +23,9 @@ const get_all_bus_disruptions = async () => {
 
 	const result = await axios.get(url_api + file, options);
 
-    for (const attribute in result.data.values) {
-        if (result.data.values[attribute].mode == 'Bus')
-		    funiculaire.push(result.data.values[attribute]);
+    	for (const attribute in result.data.values) {
+        	if (result.data.values[attribute].mode == 'Bus')
+		    bus.push(result.data.values[attribute]);
 	}
 	return bus;
 };
@@ -37,9 +37,9 @@ const get_all_metro_disruptions = async () => {
 
 	const result = await axios.get(url_api + file, options);
 
-    for (const attribute in result.data.values) {
-        if (result.data.values[attribute].mode == 'M\u00e9tro')
-		    funiculaire.push(result.data.values[attribute]);
+    	for (const attribute in result.data.values) {
+        	if (result.data.values[attribute].mode == 'M\u00e9tro')
+		    metro.push(result.data.values[attribute]);
 	}
 	return metro;
 };
@@ -52,7 +52,7 @@ const get_all_funiculaire_disruptions = async () => {
 	const result = await axios.get(url_api + file, options);
 
 	for (const attribute in result.data.values) {
-        if (result.data.values[attribute].mode == 'Funiculaire')
+        	if (result.data.values[attribute].mode == 'Funiculaire')
 		    funiculaire.push(result.data.values[attribute]);
 	}
 	return funiculaire;
@@ -67,7 +67,7 @@ const get_all_tramway_disruptions = async () => {
 
 	for (const attribute in result.data.values) {
         if (result.data.values[attribute].mode == 'Tramway')
-		    funiculaire.push(result.data.values[attribute]);
+		    tramway.push(result.data.values[attribute]);
 	}
 	return tramway;
 };
@@ -81,7 +81,7 @@ const get_all_juniordirect_disruptions = async () => {
 
 	for (const attribute in result.data.values) {
         if (result.data.values[attribute].mode == 'Junior Direct')
-		    funiculaire.push(result.data.values[attribute]);
+		    juniordirect.push(result.data.values[attribute]);
 	}
 	return juniordirect;
 };

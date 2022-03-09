@@ -40,6 +40,8 @@ const main = async () => {
     }
     console.log("Number of bus disruptions: " + bus);
 }
+
+main();
 ```
 ## get_all_bus_disruptions
 This function return all the bus disruptions<br />
@@ -76,6 +78,8 @@ const main = async () => {
     const human_impacted_lines = [...new Set(impacted_lines)];
     console.log(human_impacted_lines);
 }
+
+main();
 ```
 
 ## get_all_funiculaire_disruptions
